@@ -112,9 +112,11 @@
       <section>
         Teal is here! 
         <form id="list" action="/action_page.php">
-          First name: <input type="text" name="fname" value="test 1"><br>
-          Last name: <input type="text" name="lname" value="test 2"><br>
-          <input type="submit" value="Submit">
+          Item 1: <input type="text" name="fname" value="test 1"><br>
+          Item 2: <input type="text" name="fname" value="test 1"><br>
+          Item 3: <input type="text" name="fname" value="test 1"><br>
+          Item 4: <input type="text" name="fname" value="test 1"><br>
+          <!-- <input type="submit" value="Submit"> -->
         </form> 
 
         <button onclick="myFunction()">Try it</button>
@@ -326,7 +328,25 @@
 <script>
   function myFunction() {
       var x = document.getElementById("list").elements[0].value;
+      var list = document.getElementById("list");
+      alert(list);
       document.getElementById("demo").innerHTML = x;
   }
   </script>
+
+<script type="text/javascript">
+
+     function getConfirmation(){
+        var retVal = confirm("Do you want to continue ?");
+        if( retVal == true ){
+           document.write ("User wants to continue!");
+           return true;
+        }
+        else{
+           document.write ("User does not want to continue!");
+           return false;
+        }
+     }
+
+</script>
 
