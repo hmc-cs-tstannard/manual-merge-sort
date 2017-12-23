@@ -328,7 +328,14 @@
 <script>
   function myFunction() {
       var x = document.getElementById("list").elements[0].value;
-      var list = document.getElementById("list");
+      var y = document.getElementById("list").elements[1].value;
+      var z = document.getElementById("list").elements[2].value;
+      var w = document.getElementById("list").elements[3].value;
+      var list =[];
+      list.push(x);
+      list.push(y);
+      list.push(z);
+      list.push(w);
       alert(list);
       document.getElementById("demo").innerHTML = x;
   }
