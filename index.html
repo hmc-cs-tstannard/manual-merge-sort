@@ -112,7 +112,7 @@
       <section>
         Teal is here! 
         <form id="list" action="/action_page.php">
-          Item 1: <input type="text" name="fname" value="1"><br>
+          Item 1: <input type="text" name="fname" value=1><br>
           Item 2: <input type="text" name="fname" value="2"><br>
           Item 3: <input type="text" name="fname" value="3"><br>
           Item 4: <input type="text" name="fname" value="4"><br>
@@ -367,7 +367,7 @@
     let indexRight = 0
 
     while (indexLeft < left.length && indexRight < right.length) {
-
+      alert(left[indexLeft]);
       if (left[indexLeft] < right[indexRight]) {
         result.push(left[indexLeft])
         indexLeft++
