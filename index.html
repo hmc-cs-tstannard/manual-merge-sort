@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Manual Merge Sort!</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
-
-  </head>
-
   <body id="page-top">
 
     <section>
       teal is here
     </section>
+
+    <form action="/action_page.php" onsubmit="return myFunction()">
+      Name (max 10 characters): <input type="text" id="fname" size="20" name="fname"><br>
+      Age (from 1 to 100): <input type="text" id="age" size="20" name="age"><br>
+      E-mail: <input type="text" id="email" size="20" name="mail"><br><br>
+      <input type="submit" value="Submit"> 
+    </form>
 
   </body>
 
@@ -37,6 +20,31 @@
 
 <script>
 
+function myFunction() {
+    var at = document.getElementById("email").value.indexOf("@");
+    var age = document.getElementById("age").value;
+    var fname = document.getElementById("fname").value;
+    submitOK = "true";
+
+    if (fname.length > 10) {
+        alert("The name may have no more than 10 characters");
+        submitOK = "false";
+    } 
+
+    if (isNaN(age) || age < 1 || age > 100) {
+        alert("The age must be a number between 1 and 100");
+        submitOK = "false";
+    }
+
+    if (at == -1) {
+        alert("Not a valid e-mail!");
+        submitOK = "false";
+    }
+
+    if (submitOK == "false") {
+        return false;
+    }
+}
   function mergeSort(arr) {
   if (arr.length === 1) {
     // return once we hit an array with a single item
