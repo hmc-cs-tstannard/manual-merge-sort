@@ -29,7 +29,7 @@ function myFunction() {
     var flist = document.getElementById("flist").value;
     alert(flist)
 
-    console.log(mergeSort([1, 4, 3, 2]))
+    alert(mergeSort([1, 4, 3, 2]))
     console.log('sorted')
     // submitOK = "true";
     // document.getElementById(show_list)=flist;
@@ -62,7 +62,7 @@ function myFunction() {
     let indexRight = 0
 
     while (indexLeft < left.length && indexRight < right.length) {
-      alert(left[indexLeft]);
+      console.log(left[indexLeft]);
       if (left[indexLeft] < right[indexRight]) {
         result.push(left[indexLeft])
         indexLeft++
