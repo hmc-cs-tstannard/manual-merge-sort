@@ -14,6 +14,7 @@
   
     <p id='show_list'> list? </p>
 
+
     <form onsubmit="return myFunction()">
       flist: <input type="text" id="flist" size="200" name="flist"><br>
       <input type="submit" value="Submit"> 
@@ -29,10 +30,10 @@ function myFunction() {
     var flist = document.getElementById("flist").value;
     alert(flist)
 
-    alert(mergeSort([1, 4, 3, 2]))
+    // alert(mergeSort([1, 4, 3, 2]))
     console.log('sorted')
     // submitOK = "true";
-    // document.getElementById(show_list)=flist;
+    document.getElementById(show_list)=mergeSort([1, 4, 3, 2]);
 
     // if (submitOK == "false") {
     //     return false;
@@ -63,6 +64,7 @@ function myFunction() {
 
     while (indexLeft < left.length && indexRight < right.length) {
       console.log(left[indexLeft]);
+
       if (left[indexLeft] < right[indexRight]) {
         result.push(left[indexLeft])
         indexLeft++
