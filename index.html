@@ -27,7 +27,7 @@ function sort(){
 function merge(leftArr, rightArr) {
   var sortedArr = [];
   while (leftArr.length && rightArr.length) {
-    var r = confirm("Press a button!");
+    var r = confirm("okay(true): " + leftArr[0].toString() + " Cancel(flase) "+ rightArr[0].toString() );
     if (r == true) {//(leftArr[0] <= rightArr[0]) {
       sortedArr.push(leftArr[0]);
       leftArr = leftArr.slice(1)
