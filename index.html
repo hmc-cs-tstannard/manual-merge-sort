@@ -65,7 +65,7 @@ function myFunction() {
     let indexRight = 0
 
     while (indexLeft < left.length && indexRight < right.length) {
-      console.log(left[indexLeft]);
+      alert(left[indexLeft]);
       var val;
       if (confirm("press a button")) {
         val = "OK";
@@ -87,7 +87,7 @@ function myFunction() {
     
     var final = result.concat(left.slice(indexLeft)).concat(right.slice(indexRight));
     console.log('teal is here');
-    console.log(final);
+    alert(final);
     return final
   }
 
