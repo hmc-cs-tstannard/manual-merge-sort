@@ -27,6 +27,8 @@ function sort(){
 function merge(leftArr, rightArr) {
   var sortedArr = [];
   while (leftArr.length && rightArr.length) {
+    var btn1 = document.createElement(leftArr[0]);
+    var btn2 = document.createElement(rightArr[0]);
     if (leftArr[0] <= rightArr[0]) {
       sortedArr.push(leftArr[0]);
       leftArr = leftArr.slice(1)
@@ -39,7 +41,7 @@ function merge(leftArr, rightArr) {
     sortedArr.push(leftArr.shift());
   while (rightArr.length)
     sortedArr.push(rightArr.shift());
-  console.log(sortedArr)
+  console.log(sortedArr);
   return sortedArr;
 }
 
