@@ -13,6 +13,7 @@
       </section>
   
     <p id='show_list'> list? </p>
+    <p id="demo"></p>
 
 
     <form onsubmit="return myFunction()">
@@ -65,11 +66,20 @@ function myFunction() {
 
     while (indexLeft < left.length && indexRight < right.length) {
       console.log(left[indexLeft]);
+      var val;
+      if (confirm("press a button")) {
+        val = "OK";
+      } 
+      else {
+        txt = "Cancel";
+      }
+      document.getElementById("demo").innerHTML = txt;
 
       if (left[indexLeft] < right[indexRight]) {
         result.push(left[indexLeft])
         indexLeft++
-      } else {
+      } 
+      else {
         result.push(right[indexRight])
         indexRight++
       }
