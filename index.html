@@ -84,8 +84,11 @@ function myFunction() {
         indexRight++
       }
     }
-
-    return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight))
+    
+    var final = result.concat(left.slice(indexLeft)).concat(right.slice(indexRight));
+    console.log('teal is here');
+    console.log(final);
+    return final
   }
 
   </script>
