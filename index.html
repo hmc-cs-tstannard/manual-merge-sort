@@ -20,6 +20,8 @@ function sort(){
   var flist =  document.getElementById("flist").value.split(",").map(Number);
   // var done = mergesort([flist]);
   console.log(flist);
+
+  mergesort(flist);
 }
 
 function merge(leftArr, rightArr) {
@@ -41,7 +43,7 @@ function merge(leftArr, rightArr) {
 }
 
 function mergesort(arr) {
-  console.log(arr);
+  console.log('in mergersort');
   if (arr.length < 2) {
     return arr; }
   else {
