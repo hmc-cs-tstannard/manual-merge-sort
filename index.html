@@ -43,6 +43,7 @@ function merge(leftArr, rightArr) {
 }
 
 function mergesort(arr) {
+  console.log(arr);
   if (arr.length < 2) {
     return arr; }
   else {
@@ -52,6 +53,5 @@ function mergesort(arr) {
     return merge(mergesort(leftArr), mergesort(rightArr));
   }
 }
-console.log('This should be the sorted array!')
-console.log(mergesort(unsortedArr));
+
 </script>
