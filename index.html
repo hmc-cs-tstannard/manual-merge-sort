@@ -3,25 +3,14 @@
 
   <body id="page-top">
 
-    <section>
-      teal is here
-    </section>
-
-
-    <section>
-        Add form:
-      </section>
-  
     <p id='show_list'> list? </p>
     <p id="demo"></p>
 
-
-    <form onsubmit="return sort()">
+    <p>
       flist: <input type="text" id="flist" size="200" name="flist"><br>
-      <input type="submit" value="Submit"> 
-    </form>
+    </p>
 
-    <button onclick="sort()">Click me</button>
+    <button onclick="sort()">start sorting</button>
   </body>
 
 </html>
@@ -33,21 +22,4 @@ function sort(){
   console.log('its teal');
   return false;
 }
-  </script>
-
-<script type="text/javascript">
-
-     function getConfirmation(){
-        var retVal = confirm("Do you want to continue ?");
-        if( retVal == true ){
-           document.write ("User wants to continue!");
-           return true;
-        }
-        else{
-           document.write ("User does not want to continue!");
-           return false;
-        }
-     }
-
 </script>
-
