@@ -18,8 +18,8 @@
 <script>
 function sort(){
   var flist = '[' + document.getElementById("flist").value + ']';
-  mergesort([flist]);
-  console.log('its teal');
+  var done = mergesort([flist]);
+  console.log(done);
 }
 
 function merge(leftArr, rightArr) {
