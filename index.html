@@ -27,11 +27,8 @@ function sort(){
 function merge(leftArr, rightArr) {
   var sortedArr = [];
   while (leftArr.length && rightArr.length) {
-    var btn1 = document.createElement('one');
-    var btn2 = document.createElement('two');
-    document.body.appendChild(btn1);
-    document.body.appendChild(btn2);
-    if (leftArr[0] <= rightArr[0]) {
+    var r = confirm("Press a button!");
+    if (r == true) {//(leftArr[0] <= rightArr[0]) {
       sortedArr.push(leftArr[0]);
       leftArr = leftArr.slice(1)
    } else {
