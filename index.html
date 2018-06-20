@@ -28,8 +28,12 @@ function merge(leftArr, rightArr) {
   var sortedArr = [];
   while (leftArr.length && rightArr.length) {
     var r = confirm("Cancel(flase) "+ rightArr[0].toString() + " okay(true): " + leftArr[0].toString() );
-    var btn1 = document.createElement(rightArr[0].toString());
+    var btn1 = document.createElement('right');
+    var t1 = document.createTextNode(rightArr[0].toString());
+    btn1.appendChild(t1);
     var btn2 = document.createElement(leftArr[0].toString());
+    var t2 = document.createTextNode(leftArr[0].toString());
+    btn2.appendChild(t2);
     document.body.appendChild(btn1);
     document.body.appendChild(btn2);
 
