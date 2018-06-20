@@ -39,11 +39,11 @@ function merge(leftArr, rightArr) {
     sortedArr.push(leftArr.shift());
   while (rightArr.length)
     sortedArr.push(rightArr.shift());
+  console.log(sortedArr)
   return sortedArr;
 }
 
 function mergesort(arr) {
-  console.log('in mergersort');
   if (arr.length < 2) {
     return arr; }
   else {
