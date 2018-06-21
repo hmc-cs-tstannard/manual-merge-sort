@@ -19,7 +19,8 @@
 
 <script>
 function sort(){
-  var flist =  document.getElementById("flist").value.split(",");
+  var flist =  document.getElementById("flist").value.split(' ,').join(',').split(",");
+  
   // var done = mergesort([flist]);
   console.log(flist);
 
