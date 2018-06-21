@@ -3,7 +3,7 @@
 
   <body id="page-top">
     <p> manual merge sort </p>
-    <p id='show_list'> list? </p>
+    
     <p id="demo"></p>
 
     <p>
@@ -11,6 +11,8 @@
     </p>
 
     <button onclick="sort()">start sorting</button>
+
+    <p id='show_list'></p>
   </body>
 
 </html>
@@ -51,6 +53,7 @@ function merge(leftArr, rightArr) {
   while (rightArr.length)
     sortedArr.push(rightArr.shift());
   console.log(sortedArr);
+  document.getElementById('show_list').innerHTML = sortedArr;
   return sortedArr;
 }
 
