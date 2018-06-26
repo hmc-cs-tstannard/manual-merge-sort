@@ -232,7 +232,7 @@ p {
 }
 
 .bg-primary {
-  background-color: white !important;
+  background-color: black !important;
 }
 
 .btn {
@@ -240,7 +240,7 @@ p {
 }
 
 .btn-primary {
-  background-color: white;
+  background-color: black;
   border-color: black;
 }
 
