@@ -24,13 +24,50 @@
   </head>
   <style>
     .mySlides {display:none}
+
     .demo {cursor:pointer}
+
     .center {
       display: block;
       margin-left: auto;
       margin-right: auto;
       width: 40%;
       }
+
+    .slidecontainer {
+      width: 100%;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 25px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: #008080;
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #008080;
+        cursor: pointer;
+    }
     </style>
 
   <body>
@@ -85,6 +122,14 @@
       </div>
     </section>
 
+  <div class="slidecontainer">
+      <input type="range" min="1" max="20" value="10" class="slider" id="diameter_slider">
+      <p>Diameter: <span id="diameter"></span></p>
+      <input type="range" min="1" max="20" value="10" class="slider" id="height_slider">
+      <p>Height: <span id="height"></span></p>
+    </div>
+
+
 <div class="w3-content" style="max-width:1000px">
   <img class="center mySlides" src="img/geo_1_plate.jpg">
   <img class="center mySlides" src="img/bowl_1.jpg">
@@ -130,6 +175,7 @@
 </html>
 
 <script>
+  //photos code 
   var slideIndex = 1;
   showDivs(slideIndex);
   
@@ -156,4 +202,24 @@
     x[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " w3-opacity-off";
   }
+
+  //slider code 
+  var diameter_slider = document.getElementById("diameter_slider");
+  var diameter_output = document.getElementById("diameter");
+
+  var height_slider = document.getElementById("height_slider");
+  var height_output = document.getElementById("height");
+
+  diameter_slider.innerHTML = diameter_slider.value;
+
+  diameter_slider.oninput = function() {
+    diameter_output.innerHTML = this.value;
+  }
+
+  height_slider.innerHTML = height_slider.value;
+
+  height_slider.oninput = function() {
+    height_output.innerHTML = this.value;
+  }
+
   </script>
