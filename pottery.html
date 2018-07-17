@@ -123,8 +123,8 @@
                   <input type="range" min="1" max="20" value="10" class="slider" id="height_slider">
                   <p>Height(in): <span id="height"></span></p>
 
-                  <p>Wet volume (in^3): <span id="wet_vol"></span> </p>
-                  <p>Glaze fired volume (in^3): <span id="dry_vol"></span></p>
+                  <p>Wet volume (ounces): <span id="wet_vol"></span> </p>
+                  <p>Glaze fired volume (ounces): <span id="dry_vol"></span></p>
                 </div>
 
               
@@ -221,8 +221,10 @@
   diameter_slider.oninput = function() {
     diameter_output.innerHTML = this.value;
     var radius = this.value/2
-    wet_vol.innerHTML = (Math.PI * Math.pow(radius, 2) * height_slider.value).toFixed(1);
-
+    wet_vol.innerHTML = (Math.PI * Math.pow(radius, 2) * height_slider.value * .55411377149784).toFixed(1);
+    var new_r = (this.value * .9)/2 
+    var new_h = height_slider.value * .9
+    dry_vol.innerHTML = (Math.PI * Math.pow(new_r, 2) * new_h * .55411377149784).toFixed(1);
   }
 
   height_slider.innerHTML = height_slider.value;
@@ -230,7 +232,10 @@
   height_slider.oninput = function() {
     height_output.innerHTML = this.value;
     var radius= diameter_slider.value/2
-    wet_vol.innerHTML = (Math.PI * Math.pow(radius, 2) * this.value).toFixed(1);
+    wet_vol.innerHTML = (Math.PI * Math.pow(radius, 2) * this.value * .55411377149784).toFixed(1);
+    var new_r = (diameter_slider.value * .9)/2 
+    var new_h = this.value * .9
+    dry_vol.innerHTML = (Math.PI * Math.pow(new_r, 2) * new_h * .55411377149784).toFixed(1);
   }
 
 
