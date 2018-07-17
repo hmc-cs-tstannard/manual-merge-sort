@@ -221,7 +221,7 @@
   diameter_slider.oninput = function() {
     diameter_output.innerHTML = this.value;
     var radius = this.value/2
-    wet_vol.innerHTML = Math.PI * Math.pow(radius, 2) * height_slider.value
+    wet_vol.innerHTML = (Math.PI * Math.pow(radius, 2) * height_slider.value).toFixed(3)
 
   }
 
@@ -229,6 +229,8 @@
 
   height_slider.oninput = function() {
     height_output.innerHTML = this.value;
+    var radius= diameter_slider.value/2
+    wet_vol.innerHTML = (Math.PI * Math.pow(radius, 2) * this.value).toFixed(3)
   }
 
 
